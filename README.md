@@ -112,7 +112,7 @@ For more ways to train or test please refer to [MMDetection user guides](https:/
 ## Citation
 If you find our repo useful for your research, please cite us:
 ```
-@InProceedings{Lian_2023_ICCV,
+@InProceedings{Lian_2024_ICML,
     author    = {Lian, Shijie and Zhang, Ziyi and Li, Hua and Li, Wenjie and Yang, Laurence Tianruo and Kwong, Sam and Cong, Runmin}
     title     = {Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset},
     booktitle = {Proceedings of the International Conference on Machine Learning (ICML)},

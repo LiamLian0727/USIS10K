@@ -13,5 +13,5 @@ If you found this project useful, please give us a star ⭐️ or cite us in you
   
   ![dataset img](figs/dataset_show.png)
 - **SOTA performance**: We first attempt to apply SAM to underwater salient instance segmentation and propose USIS-SAM, aiming to improve the segmentation accuracy in complex underwater scenes. Extensive public evaluation criteria and large numbers of experiments verify the effectiveness of our USIS10K dataset and USIS-SAM model.
-- 
+ 
   ![framework_img](figs/framework.png)

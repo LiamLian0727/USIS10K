@@ -109,7 +109,7 @@ bash tools/dist_train.sh project/our/configs/multiclass_usis_train.py nums_gpu
 
 For more ways to train or test please refer to [MMDetection user guides](https://mmdetection.readthedocs.io/en/latest/user_guides/index.html#useful-tools), we provide you with their [tools](tools/) toolkit and [test](tests/) toolkit in the code!
 
-### Citation
+## Citation
 If you find our repo useful for your research, please cite us:
 ```
 @InProceedings{Lian_2023_ICCV,
@@ -120,6 +120,9 @@ If you find our repo useful for your research, please cite us:
     year      = {2024},
 }
 ```
+
+## Acknowledgement
+This repository is implemented based on the [MMDetection](https://github.com/open-mmlab/mmdetection) framework and [Segment Anything Model](https://huggingface.co/facebook/sam-vit-huge). In addition, we referenced some of the code in the [RSPrompter](https://github.com/KyanChen/RSPrompter/tree/lightning) repository. Thanks to them for their excellent work.
 
 
 

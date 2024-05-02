@@ -32,7 +32,7 @@ If you found this project useful, please give us a star ⭐️ or [cite](#citati
 
 ### Environment Installation
 <details>
-<summary>Install on Environment</summary>
+<summary>Install on Environment</summary> <br/> 
 
 **Step 0**: Download and install [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/index.html) from the official website.
 

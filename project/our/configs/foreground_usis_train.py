@@ -1,10 +1,10 @@
 _base_ = ['anchor_net.py']
 
-work_dir = './work_dirs/USIS10KDataset-1/huge-mask'
+work_dir = './work_dirs/USIS10KDataset/huge'
 
 ## ---------------------- MODEL ----------------------
 
-crop_size = (512, 512)
+crop_size = (1024, 1024)
 num_classes = 1
 
 batch_augments = [dict(
@@ -28,7 +28,8 @@ data_preprocessor = dict(
 
 model = dict(
     data_preprocessor=data_preprocessor,
-    patch_embed_grad=True,
+    # 'patch_embed_grad' should be True when crop_size != (1024, 1024)
+    patch_embed_grad=False, 
     decoder_freeze=False,
     shared_image_embedding=dict(extra_config=dict(image_size=crop_size[0])),
     backbone=dict(extra_config=dict(image_size=crop_size[0])),
@@ -77,7 +78,7 @@ test_pipeline = [
     )
 ]
 
-batch_size = 4
+batch_size = 2
 num_workers = 8
 persistent_workers = True
 indices = None
@@ -127,7 +128,7 @@ val_evaluator = test_evaluator
 
 ## ---------------------- Optim ----------------------
 
-max_epochs = 60
+max_epochs = 24
 base_lr = 0.0001
 
 train_cfg = dict(type='EpochBasedTrainLoop', max_epochs=max_epochs, val_interval=3)
@@ -144,7 +145,7 @@ param_scheduler = [
         begin=0,
         end=max_epochs,
         by_epoch=True,
-        milestones=[40, 55],
+        milestones=[15, 21],
         gamma=0.1
     )
 ]

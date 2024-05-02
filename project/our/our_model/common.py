@@ -134,79 +134,7 @@ class LN2d(nn.Module):
 
 
 @MODELS.register_module()
-class MMPretrainSamVisionEncoder(BaseModule):
-    def __init__(
-            self,
-            pretrain_name,
-            out_indices=[-1],
-            out_channels=256,
-            img_size=1024,
-            peft_config=None,
-            init_cfg=None,
-    ):
-        super().__init__(init_cfg=init_cfg)
-        vision_encoder_cfg = dict(
-            type='mmpretrain.ViTSAM',
-            arch=pretrain_name.split('-')[-1],
-            img_size=img_size,
-            out_indices=out_indices,
-            patch_size=16,
-            out_channels=out_channels,
-            use_abs_pos=True,
-            use_rel_pos=True,
-            window_size=14,
-        )
-        vision_encoder = MODELS.build(vision_encoder_cfg)
-        # load checkpoint
-        if init_cfg is not None:
-            from mmengine.runner.checkpoint import load_checkpoint
-            load_checkpoint(
-                vision_encoder,
-                init_cfg.get('checkpoint'),
-                map_location='cpu',
-                revise_keys=[
-                    (r'^module\.', ''),
-                    (r'^vision_encoder\.', ''),
-                    (r'.layer_norm1.', '.ln1.'),
-                    (r'.layer_norm2.', '.ln2.'),
-                    (r'.mlp.lin1.', '.ffn.layers.0.0.'),
-                    (r'.mlp.lin2.', '.ffn.layers.1.'),
-                    (r'neck.conv1.', 'channel_reduction.0.'),
-                    (r'neck.ln1.', 'channel_reduction.1.'),
-                    (r'neck.conv2.', 'channel_reduction.2.'),
-                    (r'neck.ln2.', 'channel_reduction.3.'),
-                ]
-            )
-
-        if peft_config is not None and isinstance(peft_config, dict):
-            config = {
-                "peft_type": "LORA",
-                "r": 16,
-                'target_modules': ["qkv"],
-                "lora_alpha": 32,
-                "lora_dropout": 0.05,
-                "bias": "none",
-                "inference_mode": False,
-            }
-            config.update(peft_config)
-            peft_config = get_peft_config(config)
-            self.vision_encoder = get_peft_model(vision_encoder, peft_config)
-            if is_main_process():
-                self.vision_encoder.print_trainable_parameters()
-        else:
-            self.vision_encoder = vision_encoder
-        self.vision_encoder.is_init = True
-
-    def init_weights(self):
-        if is_main_process():
-            print('the vision encoder has been initialized')
-
-    def forward(self, *args, **kwargs):
-        return self.vision_encoder(*args, **kwargs)
-
-
-@MODELS.register_module()
-class UIISSamPositionalEmbedding(SamPositionalEmbedding, BaseModule):
+class USISSamPositionalEmbedding(SamPositionalEmbedding, BaseModule):
     def __init__(
             self,
             hf_pretrain_name,
@@ -224,7 +152,7 @@ class UIISSamPositionalEmbedding(SamPositionalEmbedding, BaseModule):
 
 
 @MODELS.register_module()
-class UIISSamPromptEncoder(SamPromptEncoder, BaseModule):
+class USISSamPromptEncoder(SamPromptEncoder, BaseModule):
     def __init__(
             self,
             hf_pretrain_name,
@@ -242,12 +170,11 @@ class UIISSamPromptEncoder(SamPromptEncoder, BaseModule):
 
 
 @MODELS.register_module()
-class UIISSamVisionEncoder(BaseModule):
+class USISSamVisionEncoder(BaseModule):
     def __init__(
             self,
             hf_pretrain_name,
             extra_config,
-            adapter_config=None,
             peft_config=None,
             init_cfg=None,
     ):
@@ -293,7 +220,7 @@ class UIISSamVisionEncoder(BaseModule):
 
 
 @MODELS.register_module()
-class UIISSamMaskDecoder(SamMaskDecoder, BaseModule):
+class USISSamMaskDecoder(SamMaskDecoder, BaseModule):
     def __init__(
             self,
             hf_pretrain_name,
@@ -308,47 +235,3 @@ class UIISSamMaskDecoder(SamMaskDecoder, BaseModule):
 
     def forward(self, *args, **kwargs):
         return self.mask_decoder(*args, **kwargs)
-
-
-@MODELS.register_module()
-class CNNAggregator(BaseModule):
-    def __init__(
-            self,
-            in_channels,
-            hidden_channels=64,
-            out_channels=256,
-            init_cfg=None,
-    ):
-        super().__init__(init_cfg=init_cfg)
-
-        self.channel_fusion = nn.Sequential(
-            nn.Conv2d(
-                in_channels,
-                hidden_channels,
-                kernel_size=1,
-                bias=False,
-            ),
-            LayerNorm2d(hidden_channels, eps=1e-6),
-            nn.Conv2d(
-                hidden_channels,
-                hidden_channels,
-                kernel_size=3,
-                padding=1,
-                bias=False,
-            ),
-            LayerNorm2d(hidden_channels, eps=1e-6),
-            nn.Conv2d(
-                hidden_channels,
-                out_channels,
-                kernel_size=3,
-                padding=1,
-                bias=False,
-            ),
-            LayerNorm2d(out_channels, eps=1e-6),
-        )
-
-    def forward(self, inputs):
-        assert len(inputs) == 1
-        x = inputs[0]
-        x = self.channel_fusion(x)
-        return x

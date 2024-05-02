@@ -59,16 +59,16 @@ sam_pretrain_ckpt_path = "/root/code/pretrain/sam-vit-huge/pytorch_model.bin"
 
 # model settings
 model = dict(
-    type='UIISAnchor',
+    type='USISAnchor',
     data_preprocessor=data_preprocessor,
     decoder_freeze=True,
     shared_image_embedding=dict(
-        type='UIISSamPositionalEmbedding',
+        type='USISSamPositionalEmbedding',
         hf_pretrain_name=sam_pretrain_name,
         init_cfg=dict(type='Pretrained', checkpoint=sam_pretrain_ckpt_path),
     ),
     backbone=dict(
-        type='UIISSamVisionEncoder',
+        type='USISSamVisionEncoder',
         hf_pretrain_name=sam_pretrain_name,
         extra_config=dict(output_hidden_states=True),
         init_cfg=dict(type='Pretrained', checkpoint=sam_pretrain_ckpt_path),
@@ -81,9 +81,9 @@ model = dict(
     ),
     #### 'adapter_config' should be changed when using different pretrain model
     neck=dict(
-        type='UIISFPN',
+        type='USISFPN',
         feature_aggregator=dict(
-            type='UIISFeatureAggregator',
+            type='USISFeatureAggregator',
             in_channels=[1280] * (32 + 1),
             #### 'in_channels' should be changed when using different pretrain model
             # base:[768] * (12 + 1), large:[1024] * (24 + 1), huge:[1280] * (32 + 1)
@@ -94,7 +94,7 @@ model = dict(
             # base: range(1, 13, 2), large: range(1, 25, 2), huge: range(1, 33, 2)
         ),
         feature_spliter=dict(
-            type='UIISSimpleFPNHead',
+            type='USISSimpleFPNHead',
             backbone_channel=256,
             in_channels=[64, 128, 256, 256],
             out_channels=256,
@@ -118,7 +118,7 @@ model = dict(
             type='CrossEntropyLoss', use_sigmoid=True, loss_weight=1.0),
         loss_bbox=dict(type='SmoothL1Loss', loss_weight=1.0)),
     roi_head=dict(
-        type='UIISPrompterAnchorRoIPromptHead',
+        type='USISPrompterAnchorRoIPromptHead',
         with_extra_pe=True,
         bbox_roi_extractor=dict(
             type='SingleRoIExtractor',
@@ -145,9 +145,9 @@ model = dict(
             out_channels=256,
             featmap_strides=[4, 8, 16, 32]),
         mask_head=dict(
-            type='UIISPrompterAnchorMaskHead',
+            type='USISPrompterAnchorMaskHead',
             mask_decoder=dict(
-                type='UIISSamMaskDecoder',
+                type='USISSamMaskDecoder',
                 hf_pretrain_name=sam_pretrain_name,
                 init_cfg=dict(type='Pretrained', checkpoint=sam_pretrain_ckpt_path)),
             in_channels=256,

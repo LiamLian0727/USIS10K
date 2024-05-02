@@ -97,11 +97,15 @@ bash pretrain/download_huggingface.sh facebook/sam-vit-huge sam-vit-huge
 
 You can use the following command for single-card training.
 
-`python tools/train.py project/our/configs/multiclass_usis_train.py`
+```shell
+python tools/train.py project/our/configs/multiclass_usis_train.py
+```
 
 Or you can use the following command for multi-card training
 
-`bash tools/dist_train.sh project/our/configs/multiclass_usis_train.py nums_gpu`
+```shell
+bash tools/dist_train.sh project/our/configs/multiclass_usis_train.py nums_gpu
+```
 
 ### Citation
 If you find our repo useful for your research, please cite us:

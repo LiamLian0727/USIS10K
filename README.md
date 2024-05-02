@@ -21,10 +21,10 @@ If you found this project useful, please give us a star ⭐️ or cite us in you
 ### Requirements
 * Python 3.7+
 * Pytorch 2.0+
-* [MMDetection](https://mmdetection.readthedocs.io/en/latest/get_started.html) 3.0+
+* CUDA 12.1 or other version
 * mmengine
 * mmcv>=2.0.0
-* CUDA 12.1 or other version
+* [MMDetection](https://mmdetection.readthedocs.io/en/latest/get_started.html) 3.0+
 
 ### Installation
 <details>

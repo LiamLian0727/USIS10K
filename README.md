@@ -50,11 +50,16 @@ mim install "mmcv>=2.0.0"
 mim install mmdet
 ```
 
+**Step 4**: Install other dependencies from requirements.txt
+```shell
+pip install -r requirements.txt
+```
+
 </details>
 
 ### Datasets
 
-Please create a data folder in your working directory and put USIS10K in it for training or testing, or you can just change the dataset path in the [config file](project/our/config).
+Please create a `data` folder in your working directory and put USIS10K in it for training or testing, or you can just change the dataset path in the [config file](project/our/configs). If you want to use other datasets, you can refer to [MMDetection documentation](https://mmdetection.readthedocs.io/en/latest/user_guides/dataset_prepare.html) to prepare the datasets.
 
     data
       ├── USIS10K
@@ -77,5 +82,39 @@ Please create a data folder in your working directory and put USIS10K in it for 
       │   │   ├── ...
 
 you can get our USIS10K dataset in [Baidu Disk]() (pwd:) or [Google Drive]().
+
+## Model Training
+
+### Download SAM model weights from huggingface
+
+We provide a simple [script](pretrain/download_huggingface.sh) to download model weights from huggingface, or you can choose another source to download weights.
+
+```shell
+bash pretrain/download_huggingface.sh facebook/sam-vit-huge sam-vit-huge
+```
+
+### Training
+
+You can use the following command for single-card training.
+
+`python tools/train.py project/our/configs/multiclass_usis_train.py`
+
+Or you can use the following command for multi-card training
+
+`bash tools/dist_train.sh project/our/configs/multiclass_usis_train.py nums_gpu`
+
+### Citation
+If you find our repo useful for your research, please cite us:
+```
+@InProceedings{Lian_2023_ICCV,
+    author    = {Lian, Shijie and Zhang, Ziyi and Li, Hua and Li, Wenjie and Yang, Laurence Tianruo and Kwong, Sam and Cong, Runmin}
+    title     = {Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset},
+    booktitle = {Proceedings of the International Conference on Machine Learning (ICML)},
+    month     = {July},
+    year      = {2024},
+}
+```
+
+
 
 

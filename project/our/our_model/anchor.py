@@ -30,19 +30,19 @@ class USISAnchor(MaskRCNN):
     def __init__(
             self,
             shared_image_embedding,
+            adapter=None,
             decoder_freeze=True,
             patch_embed_grad=False,
             use_other_backbone=False,
             *args,
             **kwargs):
         peft_config = kwargs.get('backbone', {}).get('peft_config', {})
-        adapter_config = kwargs.get('backbone', {}).get('adapter_config', None)
         super().__init__(*args, **kwargs)
         self.shared_image_embedding = MODELS.build(shared_image_embedding)
 
         self.adapter = False
         if adapter_config is not None:
-            self.adapter = MODELS.build(adapter_config)
+            self.adapter = MODELS.build(adapter)
 
         self.patch_embed_grad = patch_embed_grad
         self.use_other_backbone = use_other_backbone

@@ -4,9 +4,12 @@
 ![stars](https://img.shields.io/github/stars/LiamLian0727/USIS10K)
 ![license](https://img.shields.io/github/license/LiamLian0727/USIS10K)
 
-This repository is the official implementation of "[Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset]()", authored by Shijie Lian, Ziyi Zhang, Hua Li, Wenjie Li, Laurence Tianruo Yang, Sam Kwong, and Runmin Cong, which has been accepted by ICML2024! 🎉🎉🎉
+This repository is the official implementation of "[Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset]()", authored by Shijie Lian, Ziyi Zhang, Hua Li, Wenjie Li, Laurence Tianruo Yang, Sam Kwong, and Runmin Cong.
 
 If you found this project useful, please give us a star ⭐️ or cite us in your paper, this is the greatest support and encouragement for us.
+
+## Updates
+🚩 **News** (2024.05) USIS-SAM has been accepted as a paper at **_ICML 2024_**, receiving an **average rating of 6 with confidence of 4.25**.
 
 ## :rocket: Highlights:
 - **USIS10K dataset**: We construct the first large-scale USIS10K dataset for the underwater salient instance segmentation task, which contains 10,632 images and pixel-level annotations of 7 categories. As far as we know, this is the **largest salient instance segmentation dataset** available that simultaneously includes Class-Agnostic and Multi-Class labels.

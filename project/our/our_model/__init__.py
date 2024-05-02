@@ -1,17 +1,15 @@
 from .anchor import (
-    UIISAnchor, UIISFPN, UIISPrompterAnchorRoIPromptHead,
-    UIISSimpleFPNHead, UIISFeatureAggregator, UIISPrompterAnchorMaskHead,
+    USISAnchor, USISFPN, USISPrompterAnchorRoIPromptHead,
+    USISSimpleFPNHead, USISFeatureAggregator, USISPrompterAnchorMaskHead,
 
 )
 from .common import (
-    LN2d, UAViTAdapters, MMPretrainSamVisionEncoder, CNNAggregator,
-    UIISSamMaskDecoder, UIISSamVisionEncoder, UIISSamPositionalEmbedding, UIISSamPromptEncoder
+    LN2d, UAViTAdapters, USISSamMaskDecoder, USISSamVisionEncoder, USISSamPositionalEmbedding, USISSamPromptEncoder
 )
 from .datasets import MultiClassUSIS10KInsSegDataset, ForegroundUSIS10KInsSegDataset
 
 __all__ = [
-    'UIISAnchor', 'UIISFPN', 'UIISPrompterAnchorRoIPromptHead',
-    'UIISSimpleFPNHead', 'UIISFeatureAggregator', 'UIISPrompterAnchorMaskHead',
-    'LN2d', 'UAViTAdapters', 'MMPretrainSamVisionEncoder', 'CNNAggregator',
-    'UIISSamMaskDecoder', 'UIISSamVisionEncoder', 'UIISSamPositionalEmbedding', 'UIISSamPromptEncoder'
+    'USISAnchor', 'USISFPN', 'USISPrompterAnchorRoIPromptHead',
+    'USISSimpleFPNHead', 'USISFeatureAggregator', 'USISPrompterAnchorMaskHead', 'LN2d', 'UAViTAdapters', 
+    'USISSamMaskDecoder', 'USISSamVisionEncoder', 'USISSamPositionalEmbedding', 'USISSamPromptEncoder'
 ]

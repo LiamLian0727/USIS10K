@@ -1,5 +1,5 @@
 # USIS10K & USIS-SAM
-![stars](https://img.shields.io/github/watchers/LiamLian0727/USIS10K?style=flat)
+![stars](https://img.shields.io/github/watchers/LiamLian0727/USIS10K?style=flat&label=recent%20visitors)
 ![issues](https://img.shields.io/github/issues/LiamLian0727/USIS10K)
 ![forks](https://img.shields.io/github/forks/LiamLian0727/USIS10K?style=flat&color=orange)
 ![stars](https://img.shields.io/github/stars/LiamLian0727/USIS10K?style=flat&color=red)

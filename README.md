@@ -20,7 +20,7 @@ If you found this project useful, please give us a star ⭐️ or [cite](#citati
  
   ![framework_img](figs/framework.png)
 
-## Best Practices
+## Installation
 
 ### Requirements
 * Python 3.7+
@@ -30,7 +30,7 @@ If you found this project useful, please give us a star ⭐️ or [cite](#citati
 * mmcv>=2.0.0
 * [MMDetection](https://mmdetection.readthedocs.io/en/latest/get_started.html) 3.0+
 
-### Installation
+### Best Practices
 <details>
 <summary>Environment Installation</summary>
 

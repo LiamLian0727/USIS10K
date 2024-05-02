@@ -26,7 +26,7 @@ from .common import MultiScaleConv, ColorAttentionAdapter
 
 
 @MODELS.register_module()
-class UIISAnchor(MaskRCNN):
+class USISAnchor(MaskRCNN):
     def __init__(
             self,
             shared_image_embedding,
@@ -159,7 +159,7 @@ class UIISAnchor(MaskRCNN):
 
 
 @MODELS.register_module()
-class UIISFPN(BaseModule):
+class USISFPN(BaseModule):
     def __init__(
             self,
             feature_aggregator=None,
@@ -185,7 +185,7 @@ class UIISFPN(BaseModule):
 
 
 @MODELS.register_module()
-class UIISSimpleFPNHead(BaseModule):
+class USISSimpleFPNHead(BaseModule):
     def __init__(self,
                  backbone_channel: int,
                  in_channels: List[int],
@@ -274,7 +274,7 @@ class UIISSimpleFPNHead(BaseModule):
 
 
 @MODELS.register_module()
-class UIISFeatureAggregator(BaseModule):
+class USISFeatureAggregator(BaseModule):
     def __init__(
             self,
             in_channels,
@@ -339,7 +339,7 @@ class UIISFeatureAggregator(BaseModule):
 
 
 @MODELS.register_module()
-class UIISPrompterAnchorRoIPromptHead(StandardRoIHead):
+class USISPrompterAnchorRoIPromptHead(StandardRoIHead):
     def __init__(
             self,
             with_extra_pe=False,
@@ -567,7 +567,7 @@ class UIISPrompterAnchorRoIPromptHead(StandardRoIHead):
 
 
 @MODELS.register_module()
-class UIISPrompterAnchorMaskHead(FCNMaskHead, BaseModule):
+class USISPrompterAnchorMaskHead(FCNMaskHead, BaseModule):
     def __init__(
             self,
             mask_decoder,
@@ -598,7 +598,7 @@ class UIISPrompterAnchorMaskHead(FCNMaskHead, BaseModule):
         self.mask_decoder = MODELS.build(mask_decoder)
 
         prompt_encoder = dict(
-            type='UIISSamPromptEncoder',
+            type='USISSamPromptEncoder',
             hf_pretrain_name=copy.deepcopy(mask_decoder.get('hf_pretrain_name')),
             init_cfg=copy.deepcopy(mask_decoder.get('init_cfg')),
         )

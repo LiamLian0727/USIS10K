@@ -35,7 +35,7 @@ If you found this project useful, please give us a star ⭐️ or cite us in you
 **Step 1**: Create a conda environment and activate it.
 
 ```shell
-conda create -n usis python=3.19 -y
+conda create -n usis python=3.9 -y
 conda activate usis
 ```
 

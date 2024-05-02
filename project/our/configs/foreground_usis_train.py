@@ -40,7 +40,7 @@ model = dict(
 ## ---------------------- Dataset ----------------------
 
 # dataset settings
-dataset_type = 'ForegroundUIIS10KInsSegDataset'
+dataset_type = 'ForegroundUSIS10KInsSegDataset'
 data_root = 'data/USIS10K'
 
 backend_args = None

@@ -1,7 +1,7 @@
 # USIS10K & USIS-SAM
 ![issues](https://img.shields.io/github/issues/LiamLian0727/USIS10K)
 ![forks](https://img.shields.io/github/forks/LiamLian0727/USIS10K?style=flat)
-![stars](https://img.shields.io/github/stars/LiamLian0727/USIS10K?style=flat)
+![stars](https://img.shields.io/github/stars/LiamLian0727/USIS10K?style=flat&color=red)
 ![license](https://img.shields.io/github/license/LiamLian0727/USIS10K)
 
 This repository is the official implementation of "[Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset]()".

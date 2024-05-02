@@ -30,9 +30,9 @@ If you found this project useful, please give us a star ⭐️ or [cite](#citati
 * mmcv>=2.0.0
 * [MMDetection](https://mmdetection.readthedocs.io/en/latest/get_started.html) 3.0+
 
-### Best Practices
+### Environment Installation
 <details>
-<summary>Environment Installation</summary>
+<summary>Install on Environment</summary>
 
 **Step 0**: Download and install [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/index.html) from the official website.
 

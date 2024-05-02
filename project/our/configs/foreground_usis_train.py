@@ -30,7 +30,7 @@ model = dict(
     data_preprocessor=data_preprocessor,
     # 'patch_embed_grad' should be True when crop_size != (1024, 1024)
     patch_embed_grad=False, 
-    decoder_freeze=False,
+    decoder_freeze=True,
     shared_image_embedding=dict(extra_config=dict(image_size=crop_size[0])),
     backbone=dict(extra_config=dict(image_size=crop_size[0])),
     roi_head=dict(bbox_head=dict(num_classes=num_classes)),
@@ -99,6 +99,23 @@ train_dataloader = dict(
         backend_args=backend_args)
 )
 
+val_dataloader = test_dataloader = dict(
+    batch_size=batch_size,
+    num_workers=num_workers,
+    persistent_workers=persistent_workers,
+    drop_last=False,
+    sampler=dict(type='DefaultSampler', shuffle=False),
+    dataset=dict(
+        type=dataset_type,
+        indices=indices,
+        data_root=data_root,
+        ann_file='foreground_annotations/foreground_val_annotations.json',
+        data_prefix=dict(img='val'),
+        test_mode=True,
+        pipeline=test_pipeline,
+        backend_args=backend_args)
+)
+
 test_dataloader = dict(
     batch_size=batch_size,
     num_workers=num_workers,
@@ -115,7 +132,16 @@ test_dataloader = dict(
         pipeline=test_pipeline,
         backend_args=backend_args)
 )
-val_dataloader = test_dataloader
+
+val_evaluator = test_evaluator
+
+test_evaluator = dict(
+    type='CocoMetric',
+    metric=['bbox', 'segm'],
+    ann_file=data_root + '/foreground_annotations/foreground_val_annotations.json',
+    format_only=False,
+    backend_args=backend_args,
+)
 
 test_evaluator = dict(
     type='CocoMetric',
@@ -124,7 +150,6 @@ test_evaluator = dict(
     format_only=False,
     backend_args=backend_args,
 )
-val_evaluator = test_evaluator
 
 ## ---------------------- Optim ----------------------
 

@@ -107,6 +107,8 @@ Or you can use the following command for multi-card training
 bash tools/dist_train.sh project/our/configs/multiclass_usis_train.py nums_gpu
 ```
 
+For more ways to train or test please refer to [MMDetection user guides](https://mmdetection.readthedocs.io/en/latest/user_guides/index.html#useful-tools), we provide you with their [tools](tools/) toolkit and [test](tests/) toolkit in the code!
+
 ### Citation
 If you find our repo useful for your research, please cite us:
 ```

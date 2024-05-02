@@ -7,7 +7,7 @@ from .common import (
     LN2d, UAViTAdapters, MMPretrainSamVisionEncoder, CNNAggregator,
     UIISSamMaskDecoder, UIISSamVisionEncoder, UIISSamPositionalEmbedding, UIISSamPromptEncoder
 )
-from .datasets import MultiClassUIIS10KInsSegDataset, ForegroundUIIS10KInsSegDataset
+from .datasets import MultiClassUSIS10KInsSegDataset, ForegroundUSIS10KInsSegDataset
 
 __all__ = [
     'UIISAnchor', 'UIISFPN', 'UIISPrompterAnchorRoIPromptHead',

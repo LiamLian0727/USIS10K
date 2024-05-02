@@ -1,0 +1,16 @@
+importlib_metadata
+mat4py
+lightning==2.0.1
+redis
+scikit-learn
+scikit-image
+tenacity
+transformers
+ipdb
+prettytable
+einops
+imageio
+pycocotools
+shapely
+terminaltables
+albumentations

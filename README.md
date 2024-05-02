@@ -6,7 +6,7 @@
 
 This repository is the official implementation of "[Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset]()".
 
-If you found this project useful, please give us a star ⭐️ or cite us in your paper, this is the greatest support and encouragement for us.
+If you found this project useful, please give us a star ⭐️ or [cite](#citation) us in your paper, this is the greatest support and encouragement for us.
 
 ## 	:speech_balloon: Updates
 🚩 **News** (2024.05) This paper has been accepted as a paper at **_ICML 2024_**, receiving an **average rating of 6 with confidence of 4.25**.

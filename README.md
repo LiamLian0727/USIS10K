@@ -20,7 +20,7 @@ If you found this project useful, please give us a star ⭐️ or [cite](#citati
  
   ![framework_img](figs/framework.png)
 
-## Installation
+## Best Practices
 
 ### Requirements
 * Python 3.7+

@@ -8,7 +8,7 @@ This repository is the official implementation of "[Diving into Underwater: Segm
 
 If you found this project useful, please give us a star ⭐️ or [cite](#citation) us in your paper, this is the greatest support and encouragement for us.
 
-## 	:speech_balloon: Updates
+## :speech_balloon: Updates
 🚩 **News** (2024.05) This paper has been accepted as a paper at **_ICML 2024_**, receiving an **average rating of 6 with confidence of 4.25**.
 
 ## :rocket: Highlights:
@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 </details>
 
-### Datasets
+## Datasets
 
 Please create a `data` folder in your working directory and put USIS10K in it for training or testing, or you can just change the dataset path in the [config file](project/our/configs). If you want to use other datasets, you can refer to [MMDetection documentation](https://mmdetection.readthedocs.io/en/latest/user_guides/dataset_prepare.html) to prepare the datasets.
 

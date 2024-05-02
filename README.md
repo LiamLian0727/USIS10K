@@ -4,7 +4,7 @@
 ![stars](https://img.shields.io/github/stars/LiamLian0727/USIS10K)
 ![license](https://img.shields.io/github/license/LiamLian0727/USIS10K)
 
-This repository is the official implementation of "[Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset]()", authored by Shijie Lian, Ziyi Zhang, Hua Li, Wenjie Li, Laurence Tianruo Yang, Sam Kwong, and Runmin Cong.
+This repository is the official implementation of "[Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset]()".
 
 If you found this project useful, please give us a star ⭐️ or cite us in your paper, this is the greatest support and encouragement for us.
 

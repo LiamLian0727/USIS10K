@@ -86,6 +86,7 @@ Please create a `data` folder in your working directory and put USIS10K in it fo
       │   │   ├── ...
 
 you can get our USIS10K dataset in [Baidu Disk]() (pwd:) or [Google Drive]().
+(Dataset is coming soon!)
 
 ## Model Training
 
@@ -105,13 +106,13 @@ You can use the following command for single-card training.
 python tools/train.py project/our/configs/multiclass_usis_train.py
 ```
 
-Or you can use the following command for multi-card training
+Or you can use the following command for multi-card training.
 
 ```shell
 bash tools/dist_train.sh project/our/configs/multiclass_usis_train.py nums_gpu
 ```
 
-For more ways to train or test please refer to [MMDetection user guides](https://mmdetection.readthedocs.io/en/latest/user_guides/index.html#useful-tools), we provide you with their [tools](tools/) toolkit and [test](tests/) toolkit in the code!
+For more ways to train or test please refer to [MMDetection User Guides](https://mmdetection.readthedocs.io/en/latest/user_guides/index.html#useful-tools), we provide you with their [tools](tools/) toolkit and [test](tests/) toolkit in the code!
 
 ## Citation
 If you find our repo or USIS10K dataset useful for your research, please cite us:

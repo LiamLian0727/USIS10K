@@ -131,7 +131,7 @@ test_dataloader = dict(
         backend_args=backend_args)
 )
 
-test_evaluator = dict(
+val_evaluator = dict(
     type='CocoMetric',
     metric=['bbox', 'segm'],
     ann_file=data_root + '/foreground_annotations/foreground_val_annotations.json',

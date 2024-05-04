@@ -50,7 +50,7 @@ data_preprocessor = dict(
     batch_augments=batch_augments
 )
 
-num_classes = 10
+num_classes = 7
 prompt_shape = (100, 5)  # (per img pointset, per pointset point)
 
 # sam base model
@@ -73,11 +73,9 @@ model = dict(
         extra_config=dict(output_hidden_states=True),
         init_cfg=dict(type='Pretrained', checkpoint=sam_pretrain_ckpt_path),
         peft_config=None,
-        adapter_config=dict(
-            type='UAViTAdapters',
-            adapter_layer=range(8, 33, 2),
-            embed_dim=1280
-        ),
+    ),
+    adapter=dict(
+        type='UAViTAdapters', adapter_layer=range(8, 33, 2), embed_dim=1280
     ),
     #### 'adapter_config' should be changed when using different pretrain model
     neck=dict(

@@ -28,8 +28,6 @@ data_preprocessor = dict(
 
 model = dict(
     data_preprocessor=data_preprocessor,
-    # 'patch_embed_grad' should be True when crop_size != (1024, 1024)
-    patch_embed_grad=False, 
     decoder_freeze=True,
     shared_image_embedding=dict(extra_config=dict(image_size=crop_size[0])),
     backbone=dict(extra_config=dict(image_size=crop_size[0])),

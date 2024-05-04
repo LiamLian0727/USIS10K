@@ -89,7 +89,7 @@ you can get our USIS10K dataset in [Baidu Disk]() (pwd:) or [Google Drive]().
 
 ## Model Zoo
 |Model|tTest|Epoch    | mAP        | AP50      |AP75      |   config |   download |
-|:--:|:----------:|:----------:|:---------:|:--------:|:--------:|:-------------:|
+|:--:|:----------:|:----------::----------:|:---------:|:--------:|:--------:|:-------------:|
 |USIS-SAM|Class-Agnostic|24|-|-|-|[config](project/our/configs/foreground_usis_train.py)|[Baidu Disk]()/[Google Drive]()|
 |USIS-SAM|Multi-Class|24|-|-|-|[config](project/our/configs/multiclass_usis_train.py)|[Baidu Disk]()/[Google Drive]()|
 

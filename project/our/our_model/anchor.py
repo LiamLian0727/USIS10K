@@ -39,7 +39,7 @@ class USISAnchor(MaskRCNN):
         self.shared_image_embedding = MODELS.build(shared_image_embedding)
 
         self.adapter = False
-        if adapter_config is not None:
+        if adapter is not None:
             self.adapter = MODELS.build(adapter)
 
         self.decoder_freeze = decoder_freeze

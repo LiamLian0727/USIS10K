@@ -51,7 +51,7 @@ data_preprocessor = dict(
 )
 
 num_classes = 7
-prompt_shape = (100, 5)  # (per img pointset, per pointset point)
+pointset_point_num = 5  # per pointset point
 
 # sam base model
 sam_pretrain_name = "/root/code/pretrain/sam-vit-huge"
@@ -150,7 +150,7 @@ model = dict(
                 init_cfg=dict(type='Pretrained', checkpoint=sam_pretrain_ckpt_path)),
             in_channels=256,
             roi_feat_size=14,
-            per_pointset_point=prompt_shape[1],
+            per_pointset_point=pointset_point_num,
             with_sincos=True,
             multimask_output=False,
             class_agnostic=True,

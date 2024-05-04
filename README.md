@@ -136,6 +136,9 @@ If you find our repo or USIS10K dataset useful for your research, please cite us
 ## Acknowledgement
 This repository is implemented based on the [MMDetection](https://github.com/open-mmlab/mmdetection) framework and [Segment Anything Model](https://huggingface.co/facebook/sam-vit-huge). In addition, we referenced some of the code in the [RSPrompter](https://github.com/KyanChen/RSPrompter/tree/lightning) repository. Thanks to them for their excellent work.
 
+## 🎉 Stargazers
+[![Stargazers repo roster for @LiamLian0727/USIS10K](https://reporoster.com/stars/LiamLian0727/USIS10K)](https://github.com/LiamLian0727/USIS10K/stargazers)
+
 
 
 

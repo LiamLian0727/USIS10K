@@ -32,8 +32,6 @@ class USISAnchor(MaskRCNN):
             shared_image_embedding,
             adapter=None,
             decoder_freeze=True,
-            patch_embed_grad=False,
-            use_other_backbone=False,
             *args,
             **kwargs):
         peft_config = kwargs.get('backbone', {}).get('peft_config', {})
@@ -43,9 +41,6 @@ class USISAnchor(MaskRCNN):
         self.adapter = False
         if adapter_config is not None:
             self.adapter = MODELS.build(adapter)
-
-        self.patch_embed_grad = patch_embed_grad
-        self.use_other_backbone = use_other_backbone
 
         self.decoder_freeze = decoder_freeze
         self.frozen_modules = []
@@ -80,8 +75,8 @@ class USISAnchor(MaskRCNN):
         return positional_embedding.permute(2, 0, 1).unsqueeze(0)  # channel x height x width
 
     def extract_feat(self, batch_inputs: Tensor) -> Tuple[Tensor]:
-        if self.adapter or self.patch_embed_grad:
-            vision_outputs = self.backbone(batch_inputs, adapter=self.adapter, patch_embed_grad=self.patch_embed_grad)
+        if self.adapter:
+            vision_outputs = self.backbone(batch_inputs, adapter=self.adapter)
         else:
             vision_outputs = self.backbone(batch_inputs)
         if isinstance(vision_outputs, SamVisionEncoderOutput):

@@ -97,7 +97,7 @@ train_dataloader = dict(
         backend_args=backend_args)
 )
 
-val_dataloader = test_dataloader = dict(
+val_dataloader = dict(
     batch_size=batch_size,
     num_workers=num_workers,
     persistent_workers=persistent_workers,
@@ -130,8 +130,6 @@ test_dataloader = dict(
         pipeline=test_pipeline,
         backend_args=backend_args)
 )
-
-val_evaluator = test_evaluator
 
 test_evaluator = dict(
     type='CocoMetric',

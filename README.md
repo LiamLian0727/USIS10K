@@ -90,7 +90,7 @@ you can get our USIS10K dataset in [Baidu Disk]() (pwd:) or [Google Drive]().
 ## Model Zoo
 |Model|Test|Epoch    | mAP        | AP50      |AP75      |   config |   download |
 |:---:|:--:|:-------:|:----------:|:---------:|:--------:|:--------:|:----------:|
-|USIS-SAM|Class-Agnostic|24|64.3|84.9|74.0|[config](project/our/configs/foreground_usis_train.py)|[Baidu Disk](https://pan.baidu.com/s/1V-1fGFAvq50vbMer2n7Lkw?pwd=zvh1) (pwd:zvh1)|
+|USIS-SAM|Class-Agnostic|24|64.3|84.9|74.0|[config](project/our/configs/foreground_usis_train.py)|[Baidu Disk](https://pan.baidu.com/s/1SbNQxnNIq8Sv3dyUsWMYGw?pwd=x2am) (pwd:x2am)|
 |USIS-SAM|Multi-Class|24|43.9|59.6|50.0|[config](project/our/configs/multiclass_usis_train.py)|[Baidu Disk](https://pan.baidu.com/s/17kMQQx_DmVLGjEBVtZfUgg?pwd=tv3z) (pwd:tv3z)|
 
 Note: We optimized the code and training enhancement strategy of USIS-SAM without substantial changes to make it more efficient for training and inference, so the results here are slightly higher than the experiments in the paper.

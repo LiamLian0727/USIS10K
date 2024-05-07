@@ -6,8 +6,6 @@ from mmdet.registry import MODELS
 from mmengine.model import BaseModule
 from mmengine.dist import is_main_process
 
-from mmpretrain.models import LayerNorm2d
-
 from peft import get_peft_config, get_peft_model
 
 from transformers import SamConfig

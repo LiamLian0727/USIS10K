@@ -7,6 +7,6 @@ export HF_ENDPOINT="https://hf-mirror.com"
 
 huggingface-cli download \
 --resume-download $NAME \
---cache-dir $SAVEDIR \
+--local-dir $SAVEDIR \
 --exclude *.safetensors *.h5 \
 ${@:3}

@@ -102,7 +102,8 @@ Note: We optimized the code and training enhancement strategy of USIS-SAM withou
 We provide a simple [script](pretrain/download_huggingface.sh) to download model weights from huggingface, or you can choose another source to download weights.
 
 ```shell
-bash pretrain/download_huggingface.sh facebook/sam-vit-huge sam-vit-huge
+cd pretrain
+bash download_huggingface.sh facebook/sam-vit-huge sam-vit-huge
 ```
 
 ### Training

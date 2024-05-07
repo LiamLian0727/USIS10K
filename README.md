@@ -107,6 +107,8 @@ cd pretrain
 bash download_huggingface.sh facebook/sam-vit-huge sam-vit-huge
 ```
 
+After downloading, please modify the model weight path in the [config](https://github.com/LiamLian0727/USIS10K/blob/main/project/our/configs/anchor_net.py#L57)
+
 ### Training
 
 You can use the following command for single-card training.

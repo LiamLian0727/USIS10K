@@ -50,6 +50,7 @@ conda activate usis
 pip install -U openmim
 mim install mmengine
 mim install "mmcv>=2.0.0"
+mim install mmpretrain
 mim install mmdet
 ```
 

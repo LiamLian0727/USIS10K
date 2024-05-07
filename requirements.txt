@@ -7,6 +7,7 @@ scikit-image
 tenacity
 transformers
 ipdb
+peft
 prettytable
 einops
 imageio

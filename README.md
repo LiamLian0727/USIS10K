@@ -23,7 +23,7 @@ If you found this project useful, please give us a star ⭐️ or [cite](#citati
 
 ### Requirements
 * Python 3.7+
-* Pytorch 2.0+
+* Pytorch 2.0+ (we use the PyTorch 2.1)
 * CUDA 12.1 or other version
 * mmengine
 * mmcv>=2.0.0

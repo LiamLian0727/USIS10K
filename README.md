@@ -84,8 +84,7 @@ Please create a `data` folder in your working directory and put USIS10K in it fo
       │   │   ├── test_00001.jpg
       │   │   ├── ...
 
-you can get our USIS10K dataset in [Baidu Disk]() (pwd:) or [Google Drive]().
-(Dataset is coming soon!)
+you can get our USIS10K dataset in [Baidu Disk](https://pan.baidu.com/s/1dsyRvGADZD43MwrNHlNIdw?pwd=icml) (pwd:icml) or [Google Drive](https://drive.google.com/file/d/1LdjLPaieWA4m8vLV6hEeMvt5wHnLg9gV/view?usp=sharing).
 
 ## Model Zoo
 |Model|Test|Epoch    | mAP        | AP50      |AP75      |   config |   download |

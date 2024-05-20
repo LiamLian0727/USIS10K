@@ -103,6 +103,7 @@ We provide a simple [script](pretrain/download_huggingface.sh) to download model
 ```shell
 cd pretrain
 bash download_huggingface.sh facebook/sam-vit-huge sam-vit-huge
+cd ..
 ```
 
 After downloading, please modify the model weight path in the [config](project/our/configs/anchor_net.py#L57) file.

@@ -4,7 +4,7 @@
 ![stars](https://img.shields.io/github/stars/LiamLian0727/USIS10K?style=flat&color=red)
 ![license](https://img.shields.io/github/license/LiamLian0727/USIS10K)
 
-This repository is the official implementation of "[Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset]()".
+This repository is the official implementation of "[Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset](https://icml.cc/virtual/2024/poster/32896)".
 
 If you found this project useful, please give us a star ⭐️ or [cite](#citation) us in your paper, this is the greatest support and encouragement for us.
 

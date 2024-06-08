@@ -127,12 +127,13 @@ For more ways to train or test please refer to [MMDetection User Guides](https:/
 ## Citation
 If you find our repo or USIS10K dataset useful for your research, please cite us:
 ```
-@InProceedings{Lian_2024_ICML,
-    author    = {Lian, Shijie and Zhang, Ziyi and Li, Hua and Li, Wenjie and Yang, Laurence Tianruo and Kwong, Sam and Cong, Runmin}
-    title     = {Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset},
-    booktitle = {Proceedings of the International Conference on Machine Learning (ICML)},
-    month     = {July},
-    year      = {2024},
+@inproceedings{
+  lian2024diving,
+  title={Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset},
+  author={Shijie Lian and Ziyi Zhang and Hua Li and Wenjie Li and Laurence Tianruo Yang and Sam Kwong and Runmin Cong},
+  booktitle={Forty-first International Conference on Machine Learning},
+  year={2024},
+  url={https://openreview.net/forum?id=snhurpZt63}
 }
 ```
 

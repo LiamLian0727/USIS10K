@@ -1,4 +1,7 @@
 # Copyright (c) OpenMMLab. All rights reserved.
+
+import sys
+sys.path.append(sys.path[0] + '/..')
 import argparse
 import os
 import os.path as osp

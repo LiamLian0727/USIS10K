@@ -81,6 +81,10 @@ num_workers = 8
 persistent_workers = True
 indices = None
 
+#CLASSES = ['wrecks/ruins', 'fish', 'reefs', 'aquatic plants', 'human divers', 'robots', 'sea-floor']
+CLASSES = dict(classes=['wrecks/ruins', 'fish', 'reefs', 'aquatic plants', 'human divers', 'robots', 'sea-floor'])
+
+
 train_dataloader = dict(
     batch_size=batch_size,
     num_workers=num_workers,
@@ -90,6 +94,7 @@ train_dataloader = dict(
         type=dataset_type,
         indices=indices,
         data_root=data_root,
+        metainfo=CLASSES,
         ann_file='multi_class_annotations/multi_class_train_annotations.json',
         data_prefix=dict(img='train'),
         # filter_cfg=dict(filter_empty_gt=True, min_size=32),
@@ -107,6 +112,7 @@ val_dataloader = dict(
         type=dataset_type,
         indices=indices,
         data_root=data_root,
+        metainfo=CLASSES,
         ann_file='multi_class_annotations/multi_class_val_annotations.json',
         data_prefix=dict(img='val'),
         test_mode=True,
@@ -124,6 +130,7 @@ test_dataloader = dict(
         type=dataset_type,
         indices=indices,
         data_root=data_root,
+        metainfo=CLASSES,
         ann_file='multi_class_annotations/multi_class_test_annotations.json',
         data_prefix=dict(img='test'),
         test_mode=True,
@@ -187,3 +194,8 @@ optim_wrapper = dict(
 #       or not by default.
 #   - `base_batch_size` = (8 GPUs) x (2 samples per GPU).
 auto_scale_lr = dict(enable=False, base_batch_size=batch_size)
+
+
+#default_hooks = dict(visualization=dict(type='VisualizationHook', interval=1))# Customize interval as needed
+
+

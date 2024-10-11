@@ -124,6 +124,14 @@ bash tools/dist_train.sh project/our/configs/multiclass_usis_train.py nums_gpu
 
 For more ways to train or test please refer to [MMDetection User Guides](https://mmdetection.readthedocs.io/en/latest/user_guides/index.html#useful-tools), we provide you with their [tools](tools/) toolkit and [test](tests/) toolkit in the code!
 
+## Visualization
+
+If you want to visualize the inference results, you can use [vis_infer.py](vis_infer.py).
+
+Specifically, if you are using the [pth file](https://pan.baidu.com/s/17kMQQx_DmVLGjEBVtZfUgg?pwd=tv3z) we published, you will also need to use [add_classes.py](add_classes.py) to add class mateinfo to the pth file.
+
+These two files were provided by Kaiying Han[@original-doc](https://github.com/original-doc), thanks for his contribution to this project!
+
 ## Citation
 If you find our repo or USIS10K dataset useful for your research, please cite us:
 ```

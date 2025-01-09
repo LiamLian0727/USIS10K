@@ -89,8 +89,8 @@ you can get our USIS10K dataset in [Baidu Disk](https://pan.baidu.com/s/1dsyRvGA
 ## Model Zoo
 |Model|Test|Epoch    | mAP        | AP50      |AP75      |   config |   download |
 |:---:|:--:|:-------:|:----------:|:---------:|:--------:|:--------:|:----------:|
-|USIS-SAM|Class-Agnostic|24|64.3|84.9|74.0|[config](project/our/configs/foreground_usis_train.py)|[Baidu](https://pan.baidu.com/s/1VEGYYoEnRyAh9RcVEJrVDg?pwd=usis) (pwd:usis) / [Google](https://drive.google.com/file/d/1g2qcxLLHYwUDhmsXz4ZxMHJRl3lY-oxY/view?usp=drive_link)|
-|USIS-SAM|Multi-Class|24|43.9|59.6|50.0|[config](project/our/configs/multiclass_usis_train.py)|[Baidu](https://pan.baidu.com/s/1fIwiYW0AlL7-yyARnqE8CQ?pwd=usis) (pwd:usis) / [Google](https://drive.google.com/file/d/1suvKpSp83Ied9UjVQElcCEdGvR5ekA5m/view?usp=drive_link)|
+|USIS-SAM|Class-Agnostic|24|64.3|84.9|74.0|[config](project/our/configs/foreground_usis_train.py)|[Baidu](https://pan.baidu.com/s/1fIwiYW0AlL7-yyARnqE8CQ?pwd=usis) (pwd:usis) / [Google](https://drive.google.com/file/d/1g2qcxLLHYwUDhmsXz4ZxMHJRl3lY-oxY/view?usp=drive_link)|
+|USIS-SAM|Multi-Class|24|43.9|59.6|50.0|[config](project/our/configs/multiclass_usis_train.py)|[Baidu](https://pan.baidu.com/s/1VEGYYoEnRyAh9RcVEJrVDg?pwd=usis) (pwd:usis) / [Google](https://drive.google.com/file/d/1suvKpSp83Ied9UjVQElcCEdGvR5ekA5m/view?usp=drive_link)|
 
 Note: We optimized the code and data augmentation strategy of USIS-SAM without substantial changes to make it more efficient for training and inference, so the results here are slightly higher than the experiments in the paper.
 

@@ -4,7 +4,7 @@
 ![stars](https://img.shields.io/github/stars/LiamLian0727/USIS10K?style=flat&color=red)
 ![license](https://img.shields.io/github/license/LiamLian0727/USIS10K)
 
-This repository is the official implementation of "[Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset](https://openreview.net/pdf?id=snhurpZt63)".
+This repository is the official implementation of "[Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset](https://proceedings.mlr.press/v235/lian24c.html)".
 
 If you found this project useful, please give us a star ⭐️ or [cite](#citation) us in your paper, this is the greatest support and encouragement for us.
 
@@ -137,11 +137,11 @@ If you find our repo or USIS10K dataset useful for your research, please cite us
 ```
 @inproceedings{
   lian2024diving,
-  title={Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset},
-  author={Shijie Lian and Ziyi Zhang and Hua Li and Wenjie Li and Laurence Tianruo Yang and Sam Kwong and Runmin Cong},
-  booktitle={Forty-first International Conference on Machine Learning},
-  year={2024},
-  url={https://openreview.net/forum?id=snhurpZt63}
+  title     = {Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset},
+  author    = {Lian, Shijie and Zhang, Ziyi and Li, Hua and Li, Wenjie and Yang, Laurence Tianruo and Kwong, Sam and Cong, Runmin},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning},
+  pages     = {29545--29559},
+  year      = {2024}
 }
 ```
 

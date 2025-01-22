@@ -142,6 +142,7 @@ If you find our repo or USIS10K dataset useful for your research, please cite us
   booktitle = {Proceedings of the 41st International Conference on Machine Learning},
   pages     = {29545--29559},
   year      = {2024}
+  url       = {https://proceedings.mlr.press/v235/lian24c.html},
 }
 ```
 

@@ -135,8 +135,7 @@ These two files were provided by Kaiying Han[@original-doc](https://github.com/o
 ## Citation
 If you find our repo or USIS10K dataset useful for your research, please cite us:
 ```
-@inproceedings{
-  lian2024diving,
+@inproceedings{lian2024diving,
   title     = {Diving into Underwater: Segment Anything Model Guided Underwater Salient Instance Segmentation and A Large-scale Dataset},
   author    = {Lian, Shijie and Zhang, Ziyi and Li, Hua and Li, Wenjie and Yang, Laurence Tianruo and Kwong, Sam and Cong, Runmin},
   booktitle = {Proceedings of the 41st International Conference on Machine Learning},

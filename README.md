@@ -127,10 +127,7 @@ For more ways to train or test please refer to [MMDetection User Guides](https:/
 ## Visualization
 
 If you want to visualize the inference results, you can use [vis_infer.py](vis_infer.py).
-
-Specifically, if you are using the [pth file](https://pan.baidu.com/s/17kMQQx_DmVLGjEBVtZfUgg?pwd=tv3z) we published, you will also need to use [add_classes.py](add_classes.py) to add class mateinfo to the pth file.
-
-These two files were provided by Kaiying Han[@original-doc](https://github.com/original-doc), thanks for his contribution to this project!
+These file was provided by Kaiying Han[@original-doc](https://github.com/original-doc), thanks for his contribution to this project!
 
 ## Citation
 If you find our repo or USIS10K dataset useful for your research, please cite us:

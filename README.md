@@ -27,6 +27,7 @@ If you found this project useful, please give us a star ⭐️ or [cite](#citati
 * CUDA 12.1 or other version
 * mmengine
 * mmcv>=2.0.0
+* transformers <= 4.50.3 or refer to this [issue](https://github.com/LiamLian0727/USIS10K/issues/17#issuecomment-3062306834) change code
 * [MMDetection](https://mmdetection.readthedocs.io/en/latest/get_started.html) 3.0+
 
 ### Environment Installation

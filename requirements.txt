@@ -5,7 +5,7 @@ redis
 scikit-learn
 scikit-image
 tenacity
-transformers
+transformers<=4.50.3
 ipdb
 peft
 prettytable
